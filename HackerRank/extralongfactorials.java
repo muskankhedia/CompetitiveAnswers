@@ -17,5 +17,6 @@ public class extralongfactorials {
             big = big.multiply(a);
         }
         System.out.println(big);
+        sc.close();
     }
 }
