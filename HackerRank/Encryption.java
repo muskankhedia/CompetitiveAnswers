@@ -21,12 +21,9 @@ public class Encryption {
         int row = (int) Math.floor(Math.sqrt(len));
         int col = (int) Math.ceil(Math.sqrt(len));
         if ((row * col) < len) {
-            // row = (int) Math.ceil(len / col);
+           row++;
 
         }
-
-        System.out.println("row: "+ row);
-        System.out.println("col: " + col);
 
         char mat[][] = new char[row][col];
 
