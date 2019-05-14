@@ -1,2 +1,4 @@
 .vscode
 ./HackerRank/.idea
+.idea/
+./HackerRank/*.class
