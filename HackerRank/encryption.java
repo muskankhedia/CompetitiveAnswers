@@ -7,7 +7,7 @@ public class encryption {
     public static final Scanner sc = new Scanner(System.in);
 
     public static ArrayList<String> breakDown(String s, int rows, int columns) {
-        System.out.println(s+" "+rows+" "+columns);
+        // System.out.println(s+" "+rows+" "+columns);
         ArrayList<String> temp = new ArrayList<String>();
         int last = 0;
         while(true) {
@@ -20,7 +20,6 @@ public class encryption {
             }
         }
         temp.removeAll(Arrays.asList(null,""));
-        System.out.println(temp);
         return temp;
     }
 
@@ -37,14 +36,15 @@ public class encryption {
         String s = sc.nextLine();
         s = filter(s);
         int size = s.length();
+        // System.out.println(size);
         double root = Math.sqrt(size);
         int ceil = (int) Math.ceil(root), floor = (int) Math.floor(root);
-        int[][] possibilities_rc = new int[2][2];
+        int[][] possibilities_rc = new int[1][2];
         possibilities_rc[0][0] = floor;
-        possibilities_rc[0][1] = floor;
+        possibilities_rc[0][1] = ceil;
 
         // possibilities_rc[1][0] = floor;
-        // possibilities_rc[1][1] = ceil;
+        // possibilities_rc[1][1] = floor;
         int min = 10000;
         String answer = "";
         for(int i=0; i< possibilities_rc.length; i++) {
@@ -52,10 +52,11 @@ public class encryption {
                 floor <= possibilities_rc[i][0] 
                 && possibilities_rc[i][0] <= possibilities_rc[i][1] 
                 && possibilities_rc[i][1] <= ceil
-                && (possibilities_rc[i][0] * possibilities_rc[i][1] <= size)
+                // && (possibilities_rc[i][0] * possibilities_rc[i][1] <= size)
                 && (min > (possibilities_rc[i][0] * possibilities_rc[i][1]))) {
                 answer = "";
                 ArrayList<String> a = breakDown(s, possibilities_rc[i][0], possibilities_rc[i][1]);
+                // System.out.println(a);
                 min = possibilities_rc[i][0] * possibilities_rc[i][1];
                 for(int j=0 ; j< possibilities_rc[i][1]; j++) {
                     for(int k=0; k< a.size(); k++) {
@@ -67,7 +68,7 @@ public class encryption {
                     }
                     answer += " ";
                 }
-            }
+            } 
         }
         System.out.println(answer);
     }
