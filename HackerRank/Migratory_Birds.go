@@ -27,12 +27,10 @@ func main() {
     }
     for i := 1; i < len(values); i++ {
         if values[i] > m {
-			m = v[i]
+			m = values[i]
 			max = i+1
         }
 	}
 	fmt.Print(max)
 
 }
-
-
