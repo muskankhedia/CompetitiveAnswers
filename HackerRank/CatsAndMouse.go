@@ -26,7 +26,7 @@ func main() {
 		i++;
 	}
     
-	diff1 := 0
+	diff1 := 
 	diff2 := 0
 	
 	for _, res := range store {
