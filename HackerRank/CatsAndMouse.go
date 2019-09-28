@@ -23,7 +23,7 @@ func main() {
 		fmt.Scanf("%d",&in.cat_b)
 		fmt.Scanf("%d",&in.mouse_c)
 		store = append(store, in)
-		i++;
+		i++
 	}
     
 	diff1 := 0
