@@ -27,7 +27,7 @@ func main() {
 	}
     
 	diff1 := 0
-	diff2 := 000
+	diff2 := 0
 	
 	for _, res := range store {
 		if res.cat_a <= res.mouse_c && res.cat_b <= res.mouse_c {
