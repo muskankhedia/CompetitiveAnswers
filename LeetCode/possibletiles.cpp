@@ -7,11 +7,11 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 
     string input;
     cin >> input;
     cout << input;
-    
-    return 0;
+    a return 0;
 }
