@@ -9,6 +9,7 @@ for _ in range(t):
     found = False
     r, p = [int(x) for x in input().strip().split(" ")]
     x =  list(itertools.combinations_with_replacement(range(2), r))
+    print(x)
     for i in x:
         y = list(dict.fromkeys(list (itertools.permutations(i))))
         # print(y)
