@@ -13,5 +13,6 @@ int main()
     string input;
     cin >> input;
     cout << input;
-    a return 0;
+
+    return 0;
 }
