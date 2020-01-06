@@ -5,7 +5,7 @@ t = int(input())
 for _ in range(t):
     suma = 0
     sums = 0
-    count = 0aa
+    count = 0
     found = False
     r, p = [int(x) for x in input().strip().split(" ")]
     x =  list(itertools.combinations_with_replacement(range(2), r))
