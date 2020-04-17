@@ -22,6 +22,7 @@ def closestStraightCity(c, x, y, q):
 def all_indices(value, qlist):
     indices = []
     idx = -1
+    x = 3
     while True:
         try:
             idx = qlist.index(value, idx+1)
