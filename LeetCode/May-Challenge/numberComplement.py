@@ -7,4 +7,4 @@ class Solution:
                 new += '1'
             else:
                 new += '0'
-        return int(new,2) 
+        return int(new,2)
